@@ -46,10 +46,11 @@ function getHumanChoice(){
 
 
 // playRound(humanSelection, computerSelection)
+let humanScore = 0;
+let computerScore= 0;
 
 function playGame(){
-let humanScore = 0 
-let computerScore = 0
+
 
 function playRound(humanChoice, computerChoice){
     if ((humanChoice == "paper" && (computerChoice == "scissors" || computerChoice == "rock")) 
@@ -80,4 +81,12 @@ playRound(humanSelection, computerSelection)
 
 for (let i = 0; i <= 5; i++){
     playGame()
+}
+
+if (computerScore < humanScore){
+    console.log("Human won the game")
+}else if(computerScore > humanScore){
+    console.log("Computer won the game")
+}else{
+    console.log("Game finished with a tie")
 }
